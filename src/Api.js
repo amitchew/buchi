@@ -1,6 +1,8 @@
 import { Client } from "@petfinder/petfinder-js";
 const client = new Client({
-  apiKey: process.env.API_KEY,
-  secret: process.env.API_SECRET
+  baseUrl: "http://209.97.133.58:8000/",
+  apiKey: "Fdf8bq5IxkbNvy33sZyJHGgPqvQi1IbLJmfYRWXyGqg8brdlRj",
+  secret: "IwaMWvroxBatU6O02gWZ2EQx38sIvVPkSeTrZgn4",
+  token: "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiJiWElQM2FKNGN5SzFYN2NmZkdtVUZUMlhRTHdWdzRxZWQza3Q1VTdBOE5PTDJwakNheSIsImp0aSI6IjFiMjZkZGU1OWE4N2MxNzMwNzFmZjljYjE4OWY5NDRkMzFlM2M4MTI1N2FhNTIzNDEzZGQ4YTMwOTlhYWFjNDAyNTcwYzM0MjYzMjc1MGExIiwiaWF0IjoxNjUxNjY0MjI4LCJuYmYiOjE2NTE2NjQyMjgsImV4cCI6MTY1MTY2NzgyOCwic3ViIjoiIiwic2NvcGVzIjpbXX0.gmBj3e5RmZywml3o6QWt_fxjdaoHSKhKFf_1brrD46bI5Oc_1ojFfeqb0dTT1p5OvOcQt4u1fJ13jl7fks7Oko9_A1ZTFGHXJboKa_9OWP7maEjEwCfFat6cXQuAzuzVUHmactCmEUxUNKFA3iiK2sZtACx7eGt8zSKRc9Z-s7OGERSB6vtXz2gstjXYWFYbPLqfQm3gG3cHN-q5ELw5yNnZbIAJ2etz-CaAFKVHJn4hi7GeZynarY5YCLMpcEIZytEKeYEduLBneT3990Byz8MmNi_QUU-ltyLdxD85AtmCysfw4dGiwm2vBlpq1eoFOKgByPoDRWVPIzWd7UUAGA"
 });
 export default client;

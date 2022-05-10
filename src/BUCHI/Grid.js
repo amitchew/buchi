@@ -8,7 +8,6 @@ const Grid = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const [totalPage, setTotalPage] = useState(null);
   const [pets, updatePets] = useState([]);
-  // refs
   const pageRef = useRef(totalPage);
   const loadingRef = useRef(loading);
   const currentPageRef = useRef(currentPage);
@@ -18,19 +17,11 @@ const Grid = () => {
     window.addEventListener("scroll", handleScroll);
   }, []);
 
-  /**
-   *  Event handling with functional components in react
-   *  https://medium.com/@rossbulat/react-using-refs-with-the-useref-hook-884ed25b5c29
-   *
-   */
-
-  // update the total page and reference
   const updateTotalPage = data => {
     pageRef.current = data;
     setTotalPage(data);
   };
 
-  // Update loading state
   const updateLoading = data => {
     loadingRef.current = data;
     setLoading(data);
@@ -41,16 +32,8 @@ const Grid = () => {
     setCurrentPage(data);
   };
 
-  /**
-   * concat vs push to update the state using the hooks in react
-   * https://medium.com/@rossbulat/react-using-refs-with-the-useref-hook-884ed25b5c29
-   */
-
   const getPets = () => {
-    // TODO - need to handle the input from the UI.
     let searchTerm = {
-      type: "dog",
-      breed: "akita",
       page: currentPageRef.current
     };
     pf.animal.search(searchTerm).then(response => {
@@ -61,8 +44,6 @@ const Grid = () => {
     });
   };
 
-  // implementation of the infinite scroll function
-  // fetch more pets untill the last page
   const handleScroll = () => {
     if (
       window.innerHeight + window.scrollY >= document.body.offsetHeight - 300 &&

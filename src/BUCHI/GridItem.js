@@ -17,8 +17,7 @@ const GridItem = ({ animal, index }) => {
     return animal.name.split("")[0];
   };
   const nameFormat = () => {
-    // eslint-disable-next-line react/prop-types
-    return animal.name.substring(0, 5);
+     return animal.name.substring(0, 5);
   };
   return (
     <div className={`pet-box grid-container animated fadeInUp delay-${index}s`}>
